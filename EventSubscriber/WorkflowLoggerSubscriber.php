@@ -98,6 +98,6 @@ class WorkflowLoggerSubscriber implements EventSubscriberInterface
     private function save(WorkflowLogger $logger)
     {
         $this->em->persist($logger);
-        $this->em->flush();
+        $this->em->flush($logger);
     }
 }
